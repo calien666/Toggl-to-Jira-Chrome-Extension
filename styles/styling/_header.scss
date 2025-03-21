@@ -1,0 +1,27 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  nav {
+    //a {
+    //  display: block;
+    //  text-decoration: none;
+    //  padding: 10px;
+    //  border: 1px solid black;
+    //  border-radius: 5px;
+    //  background: #FF8700;
+    //  color: #000000;
+    //  font-weight: bold;
+    //  &:hover {
+    //    background: #ffcf3f;
+    //  }
+    //}
+  }
+}
+div#credentials {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}

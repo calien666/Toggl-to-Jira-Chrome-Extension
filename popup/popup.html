@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Toggl2JIRA</title>
+    <script type="text/javascript" src="dateTimeHelpers.js"></script>
+    <script type="text/javascript" src="../scripts/Jira.js"></script>
+    <script type="text/javascript" src="../scripts/Toggl.js"></script>
+    <script type="text/javascript" src="../scripts/Identity.js"></script>
+    <script type="text/javascript" src="parser.js"></script>
+    <link href="../styles/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <details>
+            <summary>
+                <span class="status" id="jira-status"></span> Jira
+            </summary>
+            <p>
+                Jira User: <span id="jiraUser"></span><br>
+                Jira E-Mail: <span id="jiraEmail"></span>
+            </p>
+        </details>
+        <details>
+            <summary>
+                <span class="status" id="toggl-status"></span> Toggl
+            </summary>
+            <p>
+                Toggl User: <span id="togglUser"></span><br>
+                Toggl E-Mail: <span id="togglMail"></span>
+            </p>
+        </details>
+        <nav>
+            <a id="openOptions" class="btn btn-primary" href="options.html">Options</a>
+        </nav>
+    </header>
+    <form id="filter">
+        <button id='previous-day' title="Previous Day" class="littleButton btn btn-default">&lt;</button>
+        <div>
+            <label class="form-label" for="start-date">Start Date</label>
+            <input class="form-control" type="date" name="start-date" id="start-date" />
+        </div>
+        <div>
+            <label class="form-label" for="end-date">End Date</label>
+            <input class="form-control" type="date" name="end-date" id="end-date" />
+        </div>
+        <button id='next-day' title="Next Day" class="littleButton btn btn-default">&gt;</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                </th>
+                <th>
+                    Issue
+                </th>
+                <th>
+                    Toggl Task Description
+                </th>
+                <th>
+                    Date
+                </th>
+                <th>
+                    Duration
+                </th>
+                <th>
+                    Jira Work Log Comment
+                </th>
+                <th>
+                    Logged?
+                </th>
+            </tr>
+        </thead>
+        <tbody id="toggle-entries">
+        </tbody>
+    </table>
+    <button id="submit">Log work to JIRA</button>
+    <br />
+    <p id="error"></p>
+</body>
+</html>
